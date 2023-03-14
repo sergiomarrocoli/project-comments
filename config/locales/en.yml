@@ -1,4 +1,4 @@
 en:
   project:
     comment:
-      body: Status updated to %{status} by %{username}.
+      body: Status updated to "%{status}" by %{username}.

@@ -1,10 +1,19 @@
 <div class="mx-auto md:w-2/3 w-full flex flex-col">
-  <div class="mx-auto">
+  <div class="mx-auto w-full">
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
 
-    <%= render @project %>
+    <div class="flex flex-row my-5">
+      <div id="<%= dom_id @project %>" class="grow">
+          <strong class="block font-medium mb-1">Title:</strong>
+          <p class="text-6xl"><%= @project.title %></p>
+      </div>
+      <div class="w-1/4">
+        <%= render partial: "projects/status_form", locals: { project: @project } %>
+      </div>
+    </div>
+
 
     <%= link_to 'Edit this project', edit_project_path(@project), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
