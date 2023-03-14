@@ -6,3 +6,10 @@ users = [
   { email: 'user_2@example.com', username: 'User 2', password: 'password', password_confirmation: 'password' }
 ]
 User.create!(users)
+
+projects = [
+  { title: 'Project 1', status: 'to do' },
+  { title: 'Project 2', status: 'in progress' },
+  { title: 'Project 3', status: 'complete' }
+]
+Project.create!(projects)

@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: Project 1
+  status: 'in progress'
+
+two:
+  title: Project 2
+  status: 'to do'
