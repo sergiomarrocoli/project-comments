@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :comments
+  resources :comments, only: [:create]
   resources :projects
 end
