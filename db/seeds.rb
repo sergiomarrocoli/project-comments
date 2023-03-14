@@ -13,3 +13,14 @@ projects = [
   { title: 'Project 3', status: 'complete' }
 ]
 Project.create!(projects)
+
+user_1 = User.first
+user_2 = User.second
+project = Project.first
+
+comments = [
+  { body: 'Comment 1', user: user_1, project:},
+  { body: 'Comment 2', user: user_2, project:},
+  { body: 'Comment 3', user: user_1, project:}
+]
+Comment.create!(comments)
