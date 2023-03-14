@@ -1,13 +1,17 @@
 <div id="<%= dom_id project %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Title:</strong>
-    <%= project.title %>
-  </p>
+  <div class="flex flex-row">
+    <p class="my-5 grow">
+      <strong class="block font-medium mb-1">Title:</strong>
+      <%= project.title %>
+    </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Status:</strong>
-    <%= project.status %>
-  </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-2">Status:</strong>
+      <strong class="text-white bg-<%= project_pill_colour(project.status) %> rounded-full py-2 px-4">
+        <%= project.status %>
+      </strong>
+    </p>
+  </div>
 
   <% if action_name != "show" %>
     <%= link_to "Show this project", project, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
