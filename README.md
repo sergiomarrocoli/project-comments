@@ -2,7 +2,7 @@
 
 To start the app:
 ```
-bundle
 ./bin/setup
+rails db:seed
 ./bin/dev
 ```
