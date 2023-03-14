@@ -18,5 +18,7 @@
       <%= render @project.comments %>
     </div>
   </div>
+
+  <%= render partial: 'comments/form', locals: { comment: @new_comment } %>
 </div>
 

@@ -21,7 +21,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
       post comments_url, params: { comment: { body: @comment.body, project_id: @comment.project_id, user_id: @comment.user_id } }
     end
 
-    assert_redirected_to comment_url(Comment.last)
+    assert_redirected_to project_url(@comment.project_id)
   end
 
   test "should show comment" do

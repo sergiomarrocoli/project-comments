@@ -8,6 +8,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1 or /projects/1.json
   def show
+    @new_comment = Comment.new(project: @project, user: current_user)
   end
 
   # GET /projects/new
